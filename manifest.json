@@ -1,0 +1,18 @@
+{
+  "name": "Quick Translate",
+  "version": "1.0",
+  "description": "I'm in love with google translate and sometimes opening a new tab again and again beign painfull because of this i builded this extension",
+  "browser_action": {
+    "default_icon": "Refresh_icon.png",
+    "default_popup": "TextCenter.html"
+  },
+  "permissions": [ "https://translation.googleapis.com/language/translate" ],
+  "content_scripts": [
+    {
+      "matches": [ "https://*/*" ],
+      "js": [ "Api.js", "jquery.min.js" ]
+    }
+],
+
+  "manifest_version": 2
+}
